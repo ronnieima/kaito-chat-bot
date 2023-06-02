@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+  <category>
+    <pattern>*</pattern>
+    <template>
+        I am Kaito, the career advisory bot that assists 
+        computer science students in picking their career! Say Start to begin.
+    </template>
+  </category>
+  
+<category>
+    <pattern>HELLO</pattern>
+    <template>Hi</template>
+</category>
+
+<category>
+    
+    <pattern>START</pattern>
+    <that>SAY START TO BEGIN</that>
+    <template>
+        
+        Do you prefer programming or IT?
+        
+
+<carousel>
+    <card>
+        <title>Programming</title>
+            <image>https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif</image>    
+        <button>
+            <text>I prefer programming!</text>
+            <postback></postback>
+        </button>
+    </card>
+</carousel>
+    
+    </template>
+    
+</category>
+
+
+
+
+</aiml>
