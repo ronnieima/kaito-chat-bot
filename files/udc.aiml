@@ -1,44 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
     
-  <category>
+<category>
     <pattern>*</pattern>
+    <template>I'm sorry, I do not understand. Please say start to begin.</template>
+</category>
+    
+<category>
+    <pattern>Hello</pattern>
     <template>
         I am Kaito, the career advisory bot that assists 
-        computer science students in picking their career! Say Start to begin.
+        computer science students in picking their career! Say start to begin.
     </template>
-  </category>
-  
-<category>
-    <pattern>HELLO</pattern>
-    <template>Hi</template>
 </category>
 
 <category>
     
     <pattern>START</pattern>
     <that>SAY START TO BEGIN</that>
+    
     <template>
         
         Do you prefer programming or IT?
-        
 
-<carousel>
-    <card>
-        <title>Programming</title>
-            <image>https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif</image>    
-        <button>
-            <text>I prefer programming!</text>
-            <postback></postback>
-        </button>
-    </card>
-</carousel>
-    
+        <carousel>
+            <card>
+                <title>Programming</title>
+                <image>https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif</image>    
+                <button>
+                    <text>I prefer programming!</text>
+                    <postback>preferProgramming</postback>
+                </button>
+            </card>
+            
+            <card>
+                <image>https://www.trios.com/uploads/2023/01/IT-Administrator-salary.jpg</image>
+                <title>Information Technology</title>
+                <subtitle></subtitle>
+                <button>
+                    <text>I prefer IT!</text>
+                    <postback>preferIT</postback>
+                </button>
+            </card>
+        </carousel>
     </template>
-    
 </category>
 
 
+<category>
+    
+    <pattern>preferProgramming</pattern>
+    <that>SAY START TO BEGIN</that>
+    
+    <template>
+        
+        Programming, you say? Well, do you like designing or working with data? 
+        
+        <reply>
+            <text>Designing!</text>
+            <postback>design</postback>
+        </reply>
+        
+        <reply>
+            <text>Data!</text>
+            <postback>data</postback>
+        </reply>
+    </template>
+</category>
 
+
+<category>
+    
+    <pattern>design</pattern>
+    <that>SAY START TO BEGIN</that>
+    
+    <template>
+        
+        If you like programming and design, you should consider <b>Front End Web Development.</b>
+        
+        <card>
+            <image>https://i.ytimg.com/vi/BJsvSh7ZUgc/maxresdefault.jpg</image>
+            <title>Create and Design Websites</title>
+            <subtitle>
+                Use web languages such as HTML, CSS, and JavaScript that 
+                allow users to access and interact with the site or app
+            </subtitle>
+            
+            <button>
+                <text>Click to learn more.</text>
+                <url>https://www.indeed.com/hire/job-description/front-end-developer</url>
+            </button>
+            
+        </card>
+    </template>
+</category>
+
+<category>
+    
+    <pattern>data</pattern>
+    <that>SAY START TO BEGIN</that>
+    
+    <template>
+        
+        If you like programming and data, you should consider <b>Back End Web Development.</b>
+        
+        <card>
+            <image>https://www.temok.com/blog/wp-content/uploads/2020/04/backend2.jpg</image>
+            <title>Work with databases</title>
+            <subtitle>
+                Backend developers are like the hidden helpers of a website or app.
+            </subtitle>
+            
+            <button>
+                <text>Click to learn more.</text>
+                <url>https://www.coursera.org/articles/back-end-developer</url>
+            </button>
+            
+        </card>
+    </template>
+</category>
+
+
+<category>
+    
+    <pattern>preferIT</pattern>
+    <that>SAY START TO BEGIN</that>
+    
+    <template>
+        
+        IT, you say? Well, do you like cybersecurity, managing computers, or dealing with networks? 
+        
+        <reply>
+            <text>Cybersecurity!</text>
+            <postback>cybersecurity</postback>
+        </reply>
+        
+        <reply>
+            <text>Managing computers!</text>
+            <postback>sysadmin</postback>
+        </reply>
+        
+        <reply>
+            <text>Networking!</text>
+            <postback>network</postback>
+        </reply>
+    </template>
+</category>
+
+
+<category>
+    
+    <pattern>cybersecurity</pattern>
+    <that>SAY START TO BEGIN</that>
+    
+    <template>
+        
+        If you like IT and cybersecurity, you should consider becoming a <b>Cybersecurity Engineer.</b>
+        
+        <card>
+            <image>https://www.simplilearn.com/ice9/free_resources_article_thumb/Top_Cybersecurity_Projects.jpg</image>
+            <title>Fight Cybercrime</title>
+            <subtitle>
+                Cybersecurity analysts protect computer networks from cyberattacks and unauthorized access.
+            </subtitle>
+            
+            <button>
+                <text>Click to learn more.</text>
+                <url>https://www.coursera.org/articles/cybersecurity-analyst-job-guide</url>
+            </button>
+        </card>
+    </template>
+</category>
 
 </aiml>
