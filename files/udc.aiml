@@ -3,14 +3,14 @@
     
 <category>
     <pattern>*</pattern>
-    <template>I'm sorry, I do not understand. Please say start to begin.</template>
+    <template>I'm sorry, I do not understand. Please say "Hi" to begin.</template>
 </category>
     
 <category>
-    <pattern>Hello</pattern>
+    <pattern>HI</pattern>
     <template>
         I am Kaito, the career advisory bot that assists 
-        computer science students in picking their career! Say start to begin.
+        computer science students in picking their career! Say "start" to begin.
     </template>
 </category>
 
