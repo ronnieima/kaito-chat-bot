@@ -20,15 +20,14 @@
     <that>SAY START TO BEGIN</that>
     
     <template>
-        
-        Do you prefer programming or IT?
+        Pick your preference!
 
         <carousel>
             <card>
                 <title>Programming</title>
                 <image>https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif</image>    
                 <button>
-                    <text>I prefer <set name="topic">programming</set>!</text>
+                    <text>I prefer programming!</text>
                     <postback>XpreferProgramming</postback>
                 </button>
             </card>
@@ -36,185 +35,179 @@
             <card>
                 <image>https://www.trios.com/uploads/2023/01/IT-Administrator-salary.jpg</image>
                 <title>Information Technology</title>
-                <subtitle></subtitle>
                 <button>
-                    <text>I prefer <set name="topic">IT</set>!</text>
-                    <postback>preferIT</postback>
+                    <text>I prefer IT!</text>
+                    <postback>XpreferIT</postback>
                 </button>
             </card>
         </carousel>
     </template>
 </category>
 
-<topic name="PROGRAMMING">
-    <category>
-        
-        <pattern>XpreferProgramming</pattern>
-        <template>
-            
-            Programming, you say? Well, do you like designing or working with data? 
-            
-            <reply>
-                <text>Designing!</text>
-                <postback>design</postback>
-            </reply>
-            
-            <reply>
-                <text>Data!</text>
-                <postback>data</postback>
-            </reply>
-        </template>
-    </category>
-
-    <category>
-        
-        <pattern>design</pattern>
-        
-        <template>
-            
-            If you like programming and design, you should consider <b>Front End Web Development.</b>
-            
-            <card>
-                <image>https://i.ytimg.com/vi/BJsvSh7ZUgc/maxresdefault.jpg</image>
-                <title>Create and Design Websites</title>
-                <subtitle>
-                    Use web languages such as HTML, CSS, and JavaScript that 
-                    allow users to access and interact with the site or app
-                </subtitle>
-                
-                <button>
-                    <text>Click to learn more.</text>
-                    <url>https://www.indeed.com/hire/job-description/front-end-developer</url>
-                </button>
-                
-            </card>
-        </template>
-    </category>
-
-    <category>
-        
-        <pattern>data</pattern>
-        
-        <template>
-            
-            If you like programming and data, you should consider <b>Back End Web Development.</b>
-            
-            <card>
-                <image>https://www.temok.com/blog/wp-content/uploads/2020/04/backend2.jpg</image>
-                <title>Work with databases</title>
-                <subtitle>
-                    Backend developers are like the hidden helpers of a website or app.
-                </subtitle>
-                
-                <button>
-                    <text>Click to learn more.</text>
-                    <url>https://www.coursera.org/articles/back-end-developer</url>
-                </button>
-                
-            </card>
-        </template>
-    </category>
-
-</topic>
 
 
-
-<topic name="IT">
+<category>
     
-    <category>
+    <pattern>XpreferProgramming</pattern>
+    <template>
         
-        <pattern>preferIT</pattern>
+        Programming, you say? Well, do you like designing or working with data? 
         
-        <template>
-            
-            IT, you say? Well, do you like cybersecurity, managing systems, or dealing with networks? 
-            
-            <reply>
-                <text>Cybersecurity!</text>
-                <postback>cybersecurity</postback>
-            </reply>
-            
-            <reply>
-                <text>Managing computers!</text>
-                <postback>sysadmin</postback>
-            </reply>
-            
-            <reply>
-                <text>Networking!</text>
-                <postback>network</postback>
-            </reply>
-        </template>
-    </category>
-    
-    
-    <category>
+        <reply>
+            <text>Designing!</text>
+            <postback>design</postback>
+        </reply>
         
-        <pattern>cybersecurity</pattern>
-        
-        <template>
-            
-            If you like IT and cybersecurity, you should consider becoming a <b>Cybersecurity Engineer.</b>
-            
-            <card>
-                <image>https://www.simplilearn.com/ice9/free_resources_article_thumb/Top_Cybersecurity_Projects.jpg</image>
-                <title>Fight Cybercrime</title>
-                <subtitle>
-                    Cybersecurity analysts protect computer networks from cyberattacks and unauthorized access.
-                </subtitle>
-                
-                <button>
-                    <text>Click to learn more.</text>
-                    <url>https://www.coursera.org/articles/cybersecurity-analyst-job-guide</url>
-                </button>
-            </card>
-        </template>
-    </category>
-    
-    
-    <category>
-        <pattern>sysadmin</pattern>
-        
-        <template>
-            
-            If you like IT and managing systems, you should consider becoming a <b>Cybersecurity Engineer.</b>
-            
-            <card>
-                <image>https://upload.wikimedia.org/wikipedia/commons/6/65/System_Administrators_Burnside_Franswells_Acceptance_Testing.jpg</image>
-                <title>Maintain Computers and Servers</title>
-                <subtitle>
-                    A profession in which an expert manages systems.            
-                </subtitle>
-                
-                <button>
-                    <text>Click to learn more.</text>
-                    <url>https://www.coursera.org/articles/what-is-a-system-administrator-a-career-guide</url>
-                </button>
-            </card>
-        </template>
-    </category>
+        <reply>
+            <text>Data!</text>
+            <postback>data</postback>
+        </reply>
+    </template>
+</category>
 
-    <category>
-        <pattern>network</pattern>
-        
-        <template>
-            If you like IT and networking, you should consider becoming a <b>Network Engineer.</b>
-            
-            <card>
-                <image>https://www.interviewbit.com/blog/wp-content/uploads/2021/08/Image01-1.jpg</image>
-                <title>Manage Network Infrastructure</title>
-                <subtitle>
-                     Computer network engineers plan, develop, deploy, test and optimise network and system services.        
-                </subtitle>
-                
-                <button>
-                    <text>Click to learn more.</text>
-                    <url>https://www.roberthalf.com.au/employers/it-technology/network-engineer-jobs</url>
-                </button>
-            </card>
-        </template>
-    </category>
+<category>
     
-</topic>
+    <pattern>design</pattern>
+    
+    <template>
+        
+        If you like programming and design, you should consider <b>Front End Web Development.</b>
+        
+        <card>
+            <image>https://i.ytimg.com/vi/BJsvSh7ZUgc/maxresdefault.jpg</image>
+            <title>Create and Design Websites</title>
+            <subtitle>
+                Use web languages such as HTML, CSS, and JavaScript that 
+                allow users to access and interact with the site or app
+            </subtitle>
+            
+            <button>
+                <text>Click to learn more.</text>
+                <url>https://www.indeed.com/hire/job-description/front-end-developer</url>
+            </button>
+            
+        </card>
+    </template>
+</category>
+
+<category>
+    
+    <pattern>data</pattern>
+    
+    <template>
+        
+        If you like programming and data, you should consider <b>Back End Web Development.</b>
+        
+        <card>
+            <image>https://www.temok.com/blog/wp-content/uploads/2020/04/backend2.jpg</image>
+            <title>Work with databases</title>
+            <subtitle>
+                Backend developers are like the hidden helpers of a website or app.
+            </subtitle>
+            
+            <button>
+                <text>Click to learn more.</text>
+                <url>https://www.coursera.org/articles/back-end-developer</url>
+            </button>
+            
+        </card>
+    </template>
+</category>
+
+
+<category>
+    
+    <pattern>XpreferIT</pattern>
+    
+    <template>
+        
+        IT, you say? Well, do you like cybersecurity, managing systems, or dealing with networks? 
+        
+        <reply>
+            <text>Cybersecurity!</text>
+            <postback>cybersecurity</postback>
+        </reply>
+        
+        <reply>
+            <text>Managing computers!</text>
+            <postback>sysadmin</postback>
+        </reply>
+        
+        <reply>
+            <text>Networking!</text>
+            <postback>network</postback>
+        </reply>
+    </template>
+</category>
+
+
+<category>
+    
+    <pattern>cybersecurity</pattern>
+    
+    <template>
+        
+        If you like IT and cybersecurity, you should consider becoming a <b>Cybersecurity Engineer.</b>
+        
+        <card>
+            <image>https://www.simplilearn.com/ice9/free_resources_article_thumb/Top_Cybersecurity_Projects.jpg</image>
+            <title>Fight Cybercrime</title>
+            <subtitle>
+                Cybersecurity analysts protect computer networks from cyberattacks and unauthorized access.
+            </subtitle>
+            
+            <button>
+                <text>Click to learn more.</text>
+                <url>https://www.coursera.org/articles/cybersecurity-analyst-job-guide</url>
+            </button>
+        </card>
+    </template>
+</category>
+
+
+<category>
+    <pattern>sysadmin</pattern>
+    
+    <template>
+        
+        If you like IT and managing systems, you should consider becoming a <b>Cybersecurity Engineer.</b>
+        
+        <card>
+            <image>https://upload.wikimedia.org/wikipedia/commons/6/65/System_Administrators_Burnside_Franswells_Acceptance_Testing.jpg</image>
+            <title>Maintain Computers and Servers</title>
+            <subtitle>
+                A profession in which an expert manages systems.            
+            </subtitle>
+            
+            <button>
+                <text>Click to learn more.</text>
+                <url>https://www.coursera.org/articles/what-is-a-system-administrator-a-career-guide</url>
+            </button>
+        </card>
+    </template>
+</category>
+
+<category>
+    <pattern>network</pattern>
+    
+    <template>
+        If you like IT and networking, you should consider becoming a <b>Network Engineer.</b>
+        
+        <card>
+            <image>https://www.interviewbit.com/blog/wp-content/uploads/2021/08/Image01-1.jpg</image>
+            <title>Manage Network Infrastructure</title>
+            <subtitle>
+                 Computer network engineers plan, develop, deploy, test and optimise network and system services.        
+            </subtitle>
+            
+            <button>
+                <text>Click to learn more.</text>
+                <url>https://www.roberthalf.com.au/employers/it-technology/network-engineer-jobs</url>
+            </button>
+        </card>
+    </template>
+</category>
+    
 
 
 
